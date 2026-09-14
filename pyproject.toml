@@ -4,16 +4,23 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cronjoborganize"
-version = "0.1.1"
+version = "0.1.2"
 description = "A command-line utility to parse and categorize cron job expressions into structured CSV reports"
 authors = [
   { name="Moudi Alameel" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
-dependencies = [
-    
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/moudialameel/cronjoborganize"
+"Bug Tracker" = "https://github.com/moudialameel/cronjoborganize/issues"
 
 [project.scripts]
 # This creates the terminal command 'cron-organize'
