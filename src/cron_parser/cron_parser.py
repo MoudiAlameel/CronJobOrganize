@@ -2,6 +2,7 @@ import csv
 import argparse
 import math
 import os
+import sys
 
 def get_categorical_frequency(cron_expr):
     special = {
@@ -81,13 +82,8 @@ def get_categorical_frequency(cron_expr):
 
     return 'Every minute'
 
-def process_cron_file(input_file, output_file):
-    try:
-        with open(input_file, 'r') as f:
-            lines = f.readlines()
-    except FileNotFoundError:
-        print(f"Error: Could not find {input_file}")
-        return
+def process_cron_stream(input_stream, output_file):
+    lines = input_stream.readlines()
         
     data = []
     
@@ -141,11 +137,15 @@ def process_cron_file(input_file, output_file):
 
 def main():
     parser = argparse.ArgumentParser(description="Parse and categorize cron job expressions into structured CSV reports")
-    parser.add_argument("input_file", help="The text file containing cron jobs")
+    parser.add_argument("input_file", nargs='?', type=argparse.FileType('r'), default=sys.stdin, help="The text file containing cron jobs")
     parser.add_argument("-o", "--output", default="cron_analysis.csv", help="The output CSV file name")
     
     args = parser.parse_args()
-    process_cron_file(args.input_file, args.output)
+    
+    if args.input_file == sys.stdin and sys.stdin.isatty():
+        parser.error("You must provide an input file or pipe data to the command (e.g., crontab -l | cron-organize)")
+        
+    process_cron_stream(args.input_file, args.output)
 
 if __name__ == "__main__":
     main()
