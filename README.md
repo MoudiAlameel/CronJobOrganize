@@ -1,8 +1,8 @@
 # cronjoborganize
 
-![PyPI](https://img.shields.io/pypi/v/cronjoborganize)
-![License](https://img.shields.io/pypi/l/cronjoborganize)
-![Python](https://img.shields.io/pypi/pyversions/cronjoborganize)
+![PyPI](https://img.shields.io/pypi/v/cronjoborganize?v=1)
+![License](https://img.shields.io/pypi/l/cronjoborganize?v=1)
+![Python](https://img.shields.io/pypi/pyversions/cronjoborganize?v=1)
 
 A Python command-line tool designed to seamlessly parse and structure cron job expressions into well-organized CSV reports. 
 
