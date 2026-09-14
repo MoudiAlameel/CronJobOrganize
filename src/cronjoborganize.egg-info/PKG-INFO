@@ -5,10 +5,10 @@ Summary: A command-line utility to parse and categorize cron job expressions int
 Author: Moudi Alameel
 Project-URL: Homepage, https://github.com/moudialameel/cronjoborganize
 Project-URL: Bug Tracker, https://github.com/moudialameel/cronjoborganize/issues
-Project-URL: requires-python, >=3.8
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Dynamic: license-file
