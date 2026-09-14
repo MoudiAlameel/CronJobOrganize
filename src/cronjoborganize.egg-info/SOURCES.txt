@@ -1,3 +1,4 @@
+LICENSE
 README.md
 pyproject.toml
 src/cron_parser/__init__.py

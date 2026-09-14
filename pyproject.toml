@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cronjoborganize"
-version = "0.1.0"
+version = "0.1.1"
 description = "A command-line utility to parse and categorize cron job expressions into structured CSV reports"
 authors = [
   { name="Moudi Alameel" }

@@ -18,8 +18,8 @@ There are no external packages to install, which means it runs out-of-the-box on
 
 ## Usage
 
-1. Save your raw list of cron jobs into a text file named `cron_jobs.txt`.
-2. Place `cron_jobs.txt` in the exact same directory as the Python script.
+1. Save your raw list of cron jobs into a text file
+2. Place file in the exact same directory as the Python script.
 3. Run the script from your terminal:
    ```bash
-   python cron_parser_rounded.py
+cron-organize example.txt
