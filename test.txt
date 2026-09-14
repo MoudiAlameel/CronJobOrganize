@@ -1,0 +1,23 @@
+# Daily system backup at 2:00 AM
+0 2 * * * /usr/bin/backup.sh --full
+
+# Check server health every 15 minutes
+*/15 * * * * /opt/monitoring/health_check.py
+
+# Generate web analytics report at 11:45 PM on weekdays (Monday to Friday)
+45 23 * * 1-5 /var/www/scripts/generate_report.sh
+
+# Sync files every hour during business hours (8 AM to 5 PM)
+0 8-17 * * * rsync -avz /local/data/ /remote/data/
+
+# Run maintenance script at midnight and noon every day
+0 0,12 * * * /usr/local/bin/maintenance_task.sh
+
+# Monthly payroll processing on the 1st of every month at 5:30 AM
+30 5 1 * * /usr/bin/python3 /scripts/payroll/process.py
+
+# Reboot the router on the 15th of June and December at 3:15 AM
+15 3 15 6,12 * /scripts/network/reboot_router.sh
+
+# Run a temporary clean-up script every minute (testing purposes)
+* * * * * rm -rf /tmp/cache/*

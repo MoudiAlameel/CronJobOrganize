@@ -1,0 +1,2 @@
+[console_scripts]
+cron-organize = cron_parser.cron_parser:main
